@@ -1,0 +1,111 @@
+html, body, ul, li, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+body, h2 {
+    font: normal 12px/1.5 helvetica, tahoma, arial, sans-serif;
+    color: #666;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a, textarea {
+    outline: none;
+}
+
+.icon {
+    display: block;
+    height: 32px;
+    background: url(img/icons.png);
+    text-indent: -999px;
+    opacity: .8;
+    transition: all .5s;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.icon.c {
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5) inset;
+}
+
+.icon1 {
+    background-position: -229px -43px;
+}
+
+.icon2 {
+    background-position: -258px -125px;
+}
+
+.wrap {
+    position: relative;
+    width: 340px;
+    height: 560px;
+    padding-left: 32px;
+    background: #555;
+}
+
+.menu {
+    position: absolute;
+    width: 32px;
+    height: 10000px;
+    background: #666;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.sider {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top .2s;
+}
+
+.main > li {
+    height: 560px;
+}
+
+.fun-domtranslate h2 {
+    padding: 0 3%;
+    font: bold 16px/2 helvetica, tahoma, arial, sans-serif;
+    color: #bbb;
+    background: #555;
+}
+
+.fun-domtranslate label {
+    display: inline-block;
+    color: #fff;
+    padding-left: 3%;
+    line-height: 24px;
+    height: 24px;
+}
+
+.fun-domtranslate textarea {
+    width: 92%;
+    margin: 0 5% 0 3%;
+    border-radius: 5px;
+    border: 1px solid #333;
+    opacity: .8;
+    transition: all .3s;
+}
+
+.fun-domtranslate textarea:focus {
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
