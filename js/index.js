@@ -122,9 +122,46 @@ WebApp.Fun = (function() {
         });
     };
 
+    // ip 查询
+    var initFunIPLook = function() {
+        var getIpInfo = function(ip, callback) {
+            var script = document.createElement('script'),
+                id = 'iplook' + (+new Date);
+
+            script.id = id;
+            script.src = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' + ip;
+
+            script.onload = function() {
+                if (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') {
+                    callback(window.remote_ip_info || null);
+                    document.getElementById(id).remove();
+                }
+            };
+            document.body.appendChild(script);
+        };
+
+        document.getElementById('fun-iplook-ip').addEventListener('blur', function(e) {
+            getIpInfo(this.value.trim(), function(json) {
+                if (json && typeof json === 'object' && json.ret === 1) {
+                    delete json['ret']
+                    var v = [];
+                    for (var k in json) {
+                        v.push([k, ': ', json[k]].join(''));
+                    }
+                    v = v.join('\r');
+                    document.getElementById('fun-iplook-ret').value = v;
+                } else {
+                    // error
+                    document.getElementById('fun-iplook-ret').value = '亲，别开玩笑了，哪弄来的IP';
+                }
+            });
+        });
+    };
+
     return {
         init: function() {
             initFunDomTransition();
+            initFunIPLook();
         }
     };
 }());

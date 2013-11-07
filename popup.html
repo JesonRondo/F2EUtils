@@ -9,12 +9,9 @@
     <div class="wrap">
 
         <ul class="menu" id="menu">
-            <li>
-                <a href="javascript:;" class="icon icon1 c">calendar</a>
-            </li>
-            <li>
-                <a href="javascript:;" class="icon icon2">dom to string</a>
-            </li>
+            <li> <a href="javascript:;" class="icon icon1 c">calendar</a> </li>
+            <li> <a href="javascript:;" class="icon icon2">dom to string</a> </li>
+            <li> <a href="javascript:;" class="icon icon3">ip look</a> </li>
         </ul>
 
         <div class="sider">
@@ -22,8 +19,9 @@
                 <li>
                     <iframe src="http://sandbox.runjs.cn/show/ydp3it7b" width="340" height="560" frameborder="0"></iframe>
                 </li>
+
                 <li>
-                    <div class="fun-domtranslate">
+                    <div class="fun-domtranslate fun">
                         <h2>Dom变数组</h2>
 
                         <label for="fun-domtranslate-dom">待转换的DOM</label>
@@ -33,11 +31,24 @@
                         <textarea name="fun-domtranslate-ary" id="fun-domtranslate-ary" cols="30" rows="14" readonly="true"></textarea>
                     </div>
                 </li>
+
+                <li>
+                    <div class="fun-iplook fun">
+                        <h2>IP查询</h2>
+
+                        <label for="fun-iplook-ip">把你的ip丢进来</label>
+                        <input name="fun-iplook-ip" id="fun-iplook-ip" type="text" />
+
+                        <label for="fun-iplook-ret">IP</label>
+                        <textarea name="fun-iplook-ret" id="fun-iplook-ret" cols="30" rows="27" readonly="true"></textarea>
+                    </div>
+                </li>
             </ul>
         </div>
 
     </div>
 
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

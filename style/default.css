@@ -9,14 +9,15 @@ body, h2 {
 }
 
 html, body {
-    overflow: hidden;
+    width: 372px;
+    height: 560px;
 }
 
 li {
     list-style: none;
 }
 
-a, textarea {
+a, textarea, input {
     outline: none;
 }
 
@@ -46,6 +47,10 @@ a, textarea {
     background-position: -258px -125px;
 }
 
+.icon3 {
+    background-position: -286px -125px;
+}
+
 .wrap {
     position: relative;
     width: 340px;
@@ -57,7 +62,7 @@ a, textarea {
 .menu {
     position: absolute;
     width: 32px;
-    height: 10000px;
+    height: 560px;
     background: #666;
     top: 0;
     left: 0;
@@ -81,14 +86,14 @@ a, textarea {
     height: 560px;
 }
 
-.fun-domtranslate h2 {
+.fun h2 {
     padding: 0 3%;
     font: bold 16px/2 helvetica, tahoma, arial, sans-serif;
     color: #bbb;
     background: #555;
 }
 
-.fun-domtranslate label {
+.fun label {
     display: inline-block;
     color: #fff;
     padding-left: 3%;
@@ -96,16 +101,19 @@ a, textarea {
     height: 24px;
 }
 
-.fun-domtranslate textarea {
-    width: 92%;
+.fun input[type=text],
+.fun textarea {
+    width: 88%;
     margin: 0 5% 0 3%;
+    padding: 2%;
     border-radius: 5px;
     border: 1px solid #333;
     opacity: .8;
     transition: all .3s;
 }
 
-.fun-domtranslate textarea:focus {
+.fun input[type=text]:focus,
+.fun textarea:focus {
     opacity: 1;
     box-shadow: 0 0 15px rgba(0, 0, 0, .5);
 }
